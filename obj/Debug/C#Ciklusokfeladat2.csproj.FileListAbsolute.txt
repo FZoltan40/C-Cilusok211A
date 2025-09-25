@@ -1,0 +1,8 @@
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\bin\Debug\C#Ciklusokfeladat2.exe.config
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\bin\Debug\C#Ciklusokfeladat2.exe
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\bin\Debug\C#Ciklusokfeladat2.pdb
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\obj\Debug\C#Ciklusokfeladat2.csproj.AssemblyReference.cache
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\obj\Debug\C#Ciklusokfeladat2.csproj.CoreCompileInputs.cache
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\obj\Debug\C#Ciklusokfeladat2.exe
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\obj\Debug\C#Ciklusokfeladat2.pdb
+D:\Desktop\11AIKT\C#\C#Ciklusokfeladat2\obj\Debug\C#Ciklusokfeladat2.exe.config
