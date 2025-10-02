@@ -6,6 +6,19 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
+            int db = 0;
+            string szo = "";
+            do
+            {
+                Console.Write("Kérem a szót:");
+                szo = Console.ReadLine();
+
+                if (szo.Length > 5)
+                    db++;
+            } while (szo != "vége");
+            Console.WriteLine($"{db} 5 karakternél hosszab szó volt");
+
+            /*Feladat3
             int paros = 0, paratlan = 0, szam;
             for (int i = 0; i < 10; i++)
             {
@@ -17,7 +30,8 @@ namespace C_Ciklusokfeladat2
                 else
                     paratlan++;
             }
-            Console.WriteLine($"A páros számokból {paros} a pártlanokból {paratlan} volt.");
+            Console.WriteLine($"A páros számokból {paros} a pártlanokból {paratlan} volt.");*/
+
             /*Feladat1
             int szam = 0;
             List<int> szamok = new List<int>();
