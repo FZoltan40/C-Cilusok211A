@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace C_Ciklusokfeladat2
 {
@@ -7,6 +6,20 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
+            Console.Write("Kérem a számot:");
+            int szam = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= szam; i++)
+            {
+                for (int j = 1; j <= szam; j++)
+                {
+                    if (i * j % 3 == 0)
+                        Console.WriteLine($"{i}*{j}={i * j}");
+                }
+                Console.WriteLine("-------------------------");
+            }
+
+            /*Feladat5
             int jegy = 0;
             List<int> jegyLista = new List<int>();
             do
@@ -41,7 +54,8 @@ namespace C_Ciklusokfeladat2
                 Console.WriteLine($"{i + 1} jegyek száma: {dbLista[i]}");
             }
             Console.WriteLine($"Jegyek átlaga: {atlag / jegyLista.Count}");
-            Console.WriteLine($"Jegyek szám: {jegyLista.Count}");
+            Console.WriteLine($"Jegyek szám: {jegyLista.Count}");*/
+
             /*Feladat4
             int db = 0;
             string szo = "";
