@@ -9,6 +9,25 @@ namespace C_Ciklusokfeladat2
             Console.Write("Kérem a számot:");
             int szam = int.Parse(Console.ReadLine());
 
+            if (szam < 0)
+                Console.WriteLine("A szám negatív.");
+            else
+                Console.WriteLine("A szám pozitív.");
+
+            if (szam % 2 == 0)
+                Console.WriteLine("A szám páros.");
+            else
+                Console.WriteLine("A szám páratlan.");
+
+            if (szam % 3 == 0)
+                Console.WriteLine("A szám osztahtó hárommal.");
+            else
+                Console.WriteLine("A szám nem osztahtó hárommal.");
+
+            /*Feladat6
+            Console.Write("Kérem a számot:");
+            int szam = int.Parse(Console.ReadLine());
+
             for (int i = 1; i <= szam; i++)
             {
                 for (int j = 1; j <= szam; j++)
@@ -17,7 +36,7 @@ namespace C_Ciklusokfeladat2
                         Console.WriteLine($"{i}*{j}={i * j}");
                 }
                 Console.WriteLine("-------------------------");
-            }
+            }*/
 
             /*Feladat5
             int jegy = 0;
