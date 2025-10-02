@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace C_Ciklusokfeladat2
 {
@@ -6,6 +7,42 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
+            int jegy = 0;
+            List<int> jegyLista = new List<int>();
+            do
+            {
+                Console.Write("Kérem az osztályzatot: ");
+                jegy = int.Parse(Console.ReadLine());
+                if (jegy < 1 || jegy > 5)
+                    Console.WriteLine("Ilyen jegy nincs.");
+                else
+                    jegyLista.Add(jegy);
+
+            } while (jegy != -1);
+
+            double atlag = 0;
+            for (int i = 0; i < jegyLista.Count; i++)
+            {
+                atlag = atlag + jegyLista[i];
+            }
+
+            int[] dbLista = new int[5];
+            for (int i = 0; i < jegyLista.Count; i++)
+            {
+                for (int j = 1; j <= 5; j++)
+                {
+                    if (jegyLista[i] == j)
+                        dbLista[j - 1]++;
+                }
+            }
+
+            for (int i = 0; i < dbLista.Length; i++)
+            {
+                Console.WriteLine($"{i + 1} jegyek száma: {dbLista[i]}");
+            }
+            Console.WriteLine($"Jegyek átlaga: {atlag / jegyLista.Count}");
+            Console.WriteLine($"Jegyek szám: {jegyLista.Count}");
+            /*Feladat4
             int db = 0;
             string szo = "";
             do
@@ -16,7 +53,7 @@ namespace C_Ciklusokfeladat2
                 if (szo.Length > 5)
                     db++;
             } while (szo != "vége");
-            Console.WriteLine($"{db} 5 karakternél hosszab szó volt");
+            Console.WriteLine($"{db} 5 karakternél hosszab szó volt");*/
 
             /*Feladat3
             int paros = 0, paratlan = 0, szam;
