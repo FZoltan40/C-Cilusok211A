@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace C_Ciklusokfeladat2
 {
@@ -6,6 +7,25 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
+            string jelszo1 = "";
+            string jelszo2 = "";
+            do
+            {
+                Console.Clear();
+                Console.Write("Kérem a jelszót:");
+                jelszo1 = Console.ReadLine();
+                Console.Write("Kérem a jelszót mégegyszer:");
+                jelszo2 = Console.ReadLine();
+            }
+            while (jelszo1 != jelszo2);
+            Console.WriteLine("Kérem a tetszőleges szöveget:");
+            string szoveg = Console.ReadLine();
+
+            foreach (var item in szoveg.Reverse())
+            {
+                Console.Write(item);
+            }
+            /*Feladat7
             Console.Write("Kérem a számot:");
             int szam = int.Parse(Console.ReadLine());
 
@@ -22,7 +42,7 @@ namespace C_Ciklusokfeladat2
             if (szam % 3 == 0)
                 Console.WriteLine("A szám osztahtó hárommal.");
             else
-                Console.WriteLine("A szám nem osztahtó hárommal.");
+                Console.WriteLine("A szám nem osztahtó hárommal.");*/
 
             /*Feladat6
             Console.Write("Kérem a számot:");
