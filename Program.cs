@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace C_Ciklusokfeladat2
 {
@@ -8,7 +7,21 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
-            Dictionary<int, string> dobasEredmeny = new Dictionary<int, string>();
+            List<int> szamok = new List<int>();
+            for (int i = 0; i < 2; i++)
+            {
+                Console.Write($"Kérem az {i + 1}. számot:");
+                szamok.Add(int.Parse(Console.ReadLine()));
+            }
+
+            if (szamok[0] > szamok[1])
+                Console.WriteLine("Az első szám a nagyobb.");
+            else
+                Console.WriteLine("A második szám a nagyobb");
+
+            Console.WriteLine(Math.Abs(szamok[0] - szamok[1]));
+
+            /*Dictionary<int, string> dobasEredmeny = new Dictionary<int, string>();
             dobasEredmeny.Add(1, "Kő");
             dobasEredmeny.Add(2, "Papír");
             dobasEredmeny.Add(3, "Olló");
@@ -45,7 +58,7 @@ namespace C_Ciklusokfeladat2
             if (talalat > gepTalalat)
                 Console.WriteLine("A játkot te nyerted.");
             else
-                Console.WriteLine("A játékot a gép nyerte.");
+                Console.WriteLine("A játékot a gép nyerte.");*/
 
 
 
