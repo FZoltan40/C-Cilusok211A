@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace C_Ciklusokfeladat2
 {
@@ -7,6 +8,45 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
+            int szam = 0;
+            List<int> szamok = new List<int>();
+            do
+            {
+                Console.Write("Kérem a számot:");
+                szam = int.Parse(Console.ReadLine());
+                szamok.Add(szam);
+
+            } while (szam != 0);
+
+            List<int> dbLista = new List<int>();
+
+            for (int i = 0; i < szamok.Count; i++)
+            {
+                int db = 0;
+                for (int j = 0; j < szamok.Max(); j++)
+                {
+                    if (szamok[i] == j)
+                    {
+                        db++;
+                    }
+                }
+                dbLista.Add(db);
+                db = 0;
+            }
+
+            int max = 0;
+            int id = 0;
+            for (int i = 0; i < dbLista.Count; i++)
+            {
+                if (dbLista[i] > max)
+                {
+                    max = dbLista[i];
+                    id = i;
+                }
+            }
+            Console.WriteLine($"A legtöbbször beütött szám {szamok[id]} szám volt.");
+
+            /*Feladat1
             List<int> szamok = new List<int>();
             for (int i = 0; i < 2; i++)
             {
@@ -19,7 +59,7 @@ namespace C_Ciklusokfeladat2
             else
                 Console.WriteLine("A második szám a nagyobb");
 
-            Console.WriteLine(Math.Abs(szamok[0] - szamok[1]));
+            Console.WriteLine(Math.Abs(szamok[0] - szamok[1]));*/
 
             /*Dictionary<int, string> dobasEredmeny = new Dictionary<int, string>();
             dobasEredmeny.Add(1, "Kő");
