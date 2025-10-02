@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace C_Ciklusokfeladat2
 {
@@ -8,6 +6,19 @@ namespace C_Ciklusokfeladat2
     {
         static void Main(string[] args)
         {
+            int paros = 0, paratlan = 0, szam;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Kérem a számot:");
+                szam = int.Parse(Console.ReadLine());
+
+                if (szam % 2 == 0)
+                    paros++;
+                else
+                    paratlan++;
+            }
+            Console.WriteLine($"A páros számokból {paros} a pártlanokból {paratlan} volt.");
+            /*Feladat1
             int szam = 0;
             List<int> szamok = new List<int>();
             do
@@ -44,7 +55,7 @@ namespace C_Ciklusokfeladat2
                     id = i;
                 }
             }
-            Console.WriteLine($"A legtöbbször beütött szám {szamok[id]} szám volt.");
+            Console.WriteLine($"A legtöbbször beütött szám {szamok[id]} szám volt.");*/
 
             /*Feladat1
             List<int> szamok = new List<int>();
